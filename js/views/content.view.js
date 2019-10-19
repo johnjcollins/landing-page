@@ -27,8 +27,10 @@ export default class ContentView {
     this.navbarList.addEventListener('click', evt => {
       evt.preventDefault();
 
-      const newSectionId = evt.target.getAttribute('href').replace('#', '');
-      const newSection = this.getElement(`#${newSectionId}`);
+      const newSectionId = `#${CSS.escape(
+        evt.target.getAttribute('href').replace('#', '')
+      )}`;
+      const newSection = this.getElement(newSectionId);
       newSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
