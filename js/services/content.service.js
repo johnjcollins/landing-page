@@ -52,17 +52,6 @@ export default class ContentService {
     // Initialization
     const contents = JSON.parse(localStorage.getItem('contents')) || [];
     this.contents = contents.map(content => new Content(content));
-    this.setActiveContent(this.contents[0].id, true);
-  }
-
-  getActiveContent() {
-    const idx = this.contents.findIndex(content => content.active === true);
-    return this.contents[idx];
-  }
-
-  setActiveContent(id, value) {
-    const idx = this.contents.findIndex(content => content.id === id);
-    this.contents[idx].active = value;
   }
 
   getContent(id) {

@@ -10,15 +10,6 @@ export default class Content {
     this.id = this.uuidv4();
     this.title = title;
     this.textContent = textContent;
-    this._active = active;
-  }
-
-  get active() {
-    return this._active;
-  }
-
-  set active(newActive) {
-    this._active = newActive;
   }
 
   uuidv4() {
