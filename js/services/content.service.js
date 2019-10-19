@@ -62,12 +62,4 @@ export default class ContentService {
   getContents() {
     return this.contents;
   }
-
-  changeActiveContent(newId) {
-    // Called from nav menu item event handler
-    const oldContent = this.getActiveContent();
-    this.setActiveContent(oldContent.id, false);
-    this.setActiveContent(newId, true);
-    return oldContent.id;
-  }
 }
