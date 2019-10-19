@@ -1,5 +1,5 @@
 /**
- * @class Content
+ * @class ContentService
  *
  * Manages the data of application
  *
